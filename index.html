@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>protofolo</title>
+    <link rel="stylesheet" href="pro.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+<body>
+    <!-- animate__animated animate__bounce -->
+    <div class="container    ">
+        <header class="header">
+             <div class="logo">
+                <h2>medo khalifa </h2>
+             </div>
+             <div >
+                <nav class="nav " id="nav" >
+                 <a href="#home">home</a>
+                  <a href="#about">about</a>
+                <a href="#skills">skills</a>
+                <a href="#services">services</a>
+                <a href="#protofolow">protofolow</a>
+                <a href="#contact">contact me</a>
+                       
+                </nav>
+                
+             </div>
+             <div class="menu">
+              <i id="menu" class="fa-solid fa-bars  ">
+
+             </i>
+            </div>
+            <div> <button onclick="toggleDarkMode()">
+                
+              <i id="mode-icon" class="fa-solid fa-moon"></i>
+            </button>
+
+            </div>
+            
+        </header>
+
+           <section id="home" class="sections" >
+            <div class="text">
+                <h3>hi,there ,i,m</h3>
+                <h2>mohmed khalifa</h2>
+                <h5>frontend developer</h5>
+                <div class="icons">
+                    <a href="https://www.facebook.com/medo.khalifa.980/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/medo.khalifa.980/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-google"></i></a>
+                   
+                </div>
+                <div class="btn">let me more</div>
+            </div>
+            <div class="imgs">
+                <img src="WhatsApp Image 2025-04-23 at 21.56.22_b75a0923.png" alt="">
+            </div>
+           </section>
+
+           <section class="about" id="about">
+            <h1 class="title"> about me</h1>
+                <div class="sections2">
+                  <div class="title-me">
+                    <h2>i.m <span>mohamed khalifa</span>,a web develper</h2>
+                    <p>i.m afront-end web developer strong passion for creating vissully 
+                       Lorem ipsum, dolor sit amet consectetur 
+                      adipisicing elit. 
+                      Tempore vero tenetur perspiciatis error architecto corporis laudantium dolor obcaecati quae dolore! </p>
+                  </div>
+                  <div class="yourself"> 
+                    <h2>age:21</h2>
+                    <hr class="hr">
+                    <h2>email:</h2>
+                    <p>mk30108353@gmail.com</p>
+                    <hr class="hr">
+
+                    <h2>place:</h2>
+                    <p>Elmonofiya Sirs llayan</p>
+                    <hr class="hr">
+
+                  </div>
+                </div>
+          
+           </section>
+          <section class="skills" id="skills">
+            <h1 class="title"> skills</h1>
+            <div class="langouge">
+              <div class="skillsforme">
+                <div class="html">
+  
+                  <i class="fa-brands fa-html5" style="color: #FFD43B;"></i>
+                  <h2>html 5</h2>
+                </div>
+                <div class="css">
+                  <i class="fa-brands fa-css3-alt" style="color: #74C0FC;"></i>
+                  <h2>css</h2>
+  
+                </div>
+                <div class="js">
+                  <i class="fa-brands fa-js" style="color: #FFD43B;"></i>
+                  <h2>js</h2>
+  
+                </div>
+                <div class="python">
+                  <i class="fa-brands fa-python" style="color: #FFD43B;"></i>
+                  <h2>python</h2>
+  
+                </div>
+                <div class="react">
+                  <i class="fa-brands fa-react" style="color: #74C0FC;"></i>
+                  <h2>react</h2>
+  
+                </div>
+                <div class="bootstrab">
+                  <i class="fa-brands fa-bootstrap" style="color: #B197FC;"></i>
+                  <h2>bootstrab</h2>
+  
+                </div>
+            </div>
+           
+            </div>
+          </section>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+function toggleDarkMode() {
+      const body = document.body;
+      const icon = document.getElementById("mode-icon");
+ 
+      body.classList.toggle("dark-mode");
+      body.classList.toggle("light-mode");
+   
+     
+      // تغيير الأيقونة
+      if (body.classList.contains("dark-mode")) {
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+       
+      } else {
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+        
+      }
+    }
+    
+    const menu = document.getElementById('menu')
+    const nav = document.getElementById('nav')
+   
+    
+      menu.addEventListener("click", (e) => {
+      nav.classList.toggle("active");
+      e.stopPropagation(); // يمنع إغلاقها مباشرة عند الضغط
+    });
+
+    // الضغط في أي مكان فاضي يخفي القائمة
+    document.addEventListener("click", (e) => {
+      if (!nav.contains(e.target) && e.target !== menu) {
+        nav.classList.remove("active");
+      }
+    });
+    </script>
+</body>
+</html>
